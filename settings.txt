@@ -1,0 +1,78 @@
+; GRBL 0.9i settings for CoreXY + rack/pinion Z on Arduino Mega 2560.
+; Remove comment lines before sending, or send only the lines that start with "$".
+;
+; Step pulse length, in microseconds.
+$0=10
+; Stepper idle delay, in milliseconds. 255 keeps steppers enabled.
+$1=255
+; Step port invert mask (X=bit0, Y=bit1, Z=bit2). Set to 0 unless your drivers invert step.
+$2=0
+; Direction invert mask (X=bit0, Y=bit1, Z=bit2). Flip bits if an axis moves the wrong way.
+$3=0
+; Stepper enable invert (0 = enable is active low). TB6560 typically uses active-low enable.
+$4=0
+; Limit pin invert (0 = normally-open to GND with pullups).
+$5=0
+; Probe pin invert (unused, keep 0).
+$6=0
+; Status report mask (3 = MPos and WPos).
+$10=3
+; Junction deviation, mm.
+$11=0.010
+; Arc tolerance, mm.
+$12=0.002
+; Report inches (0 = mm).
+$13=0
+;
+; Soft limits (0 = disabled). Enable only after setting $130-$132 correctly.
+$20=0
+; Hard limits (1 = enabled).
+$21=1
+; Homing cycle (1 = enabled).
+$22=1
+; Homing direction invert mask (X=bit0, Y=bit1, Z=bit2). Adjust to match switch locations.
+$23=0
+; Homing feed, mm/min.
+$24=100.0
+; Homing seek, mm/min.
+$25=500.0
+; Homing debounce, ms.
+$26=250
+; Homing pull-off, mm.
+$27=2.0
+; Homing mode (0 = bounce/locate, 1 = simple seek + pull-off).
+$28=0
+;
+; Spindle speed range (unused with pen Z, keep defaults).
+$30=1000
+$31=0
+;
+; Steps per mm for CoreXY belts:
+; $100 = $101 = (motor_steps_per_rev * microsteps) / (pulley_teeth * belt_pitch)
+; Example: (200 * 16) / (20 * 2) = 80.0
+$100=80.000
+$101=80.000
+;
+; Steps per mm for rack & pinion Z:
+; $102 = (motor_steps_per_rev * microsteps) / (pi * module * pinion_teeth)
+; Example: (200 * 16) / (3.14159 * 1 * 20) = 50.93
+$102=50.930
+;
+; Max rates, mm/min. Tune for your mechanics.
+$110=3000.0
+$111=3000.0
+$112=300.0
+;
+; Acceleration, mm/sec^2 (GRBL stores as mm/min^2 internally).
+$120=100.0
+$121=100.0
+$122=50.0
+;
+; Max travel, mm. Set to your machine travel limits.
+$130=300.0
+$131=300.0
+$132=50.0
+;
+; Startup lines (leave empty unless needed).
+$N0=
+$N1=
