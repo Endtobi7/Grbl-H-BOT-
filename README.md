@@ -1,6 +1,6 @@
-# ⚙️ GRBL H-BOT — Firmware DRAWBOT (Arduino Mega 2560)
+# ⚙️ GRBL H-BOT — Firmware H-BOT (Arduino Mega 2560)
 
-Firmware **GRBL 0.9i** modifié pour piloter le traceur cartésien (CNC pen plotter) du projet DRAWBOT : cinématique **H-BOT** pour les axes X/Y, axe **Z à crémaillère (rack & pinion)**, drivers **TB6560**, sur carte **Arduino Mega 2560**.
+Firmware **GRBL 0.9i** modifié pour piloter le traceur cartésien (CNC pen plotter) du projet H-BOT : cinématique **H-BOT** pour les axes X/Y, axe **Z à crémaillère (rack & pinion)**, drivers **TB6560**, sur carte **Arduino Mega 2560**.
 
 ---
 
